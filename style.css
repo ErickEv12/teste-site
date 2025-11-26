@@ -1,0 +1,197 @@
+
+
+    
+    /* ===== Variáveis e Reset ===== */
+        :root {
+    --bg: #0d1117; /* fundo principal escuro */
+    --card: #161b22; /* fundo dos cards */
+    --accent: #ffd000; /* azul destaque (links e botões) */
+    --accent-2: #fbff00; /* verde claro para contrastes */
+    --muted: rgba(255, 255, 255, 0.75); /* texto secundário */
+    --glass: rgba(255, 255, 255, 0.05); /* efeito de vidro */
+    --radius: 14px;
+    --maxw: 1100px;
+    }
+
+        *{box-sizing:border-box}
+        html,body{height:100%;}
+        body {
+    margin: 0;
+    font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    background: #232a30; /* fundo sólido escuro */
+    color: #ffffff; /* texto principal */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.45;
+    padding-bottom: 80px;
+    }
+
+        /* Container central */
+        .container{max-width:var(--maxw);margin:0 auto;padding:28px}
+
+        /* ===== Header / Nav ===== */
+        header{position:sticky;top:14px;z-index:50}
+        .nav{display:flex;align-items:center;justify-content:space-between;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);backdrop-filter: blur(6px);padding:12px;border-radius:12px}
+        .brand{display:flex;gap:12px;align-items:center}
+        .logo{width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:grid;place-items:center;font-weight:800;color:rgb(0, 0, 0);font-family:'Playfair Display', serif}
+        .brand h1{margin:0;font-size:16px}
+        nav ul{display:flex;gap:18px;list-style:none;margin:0;padding:0}
+        nav a {
+    color: var(--muted);
+    text-decoration: none;
+    font-weight: 600;
+    }
+
+        /* CTA */
+    .cta {
+    display:inline-block;
+    padding:10px 14px;
+    border-radius:10px;
+    background:linear-gradient(90deg,var(--accent),var(--accent-2));
+    color:#000000; /* mantém texto branco para destacar no botão */
+    text-decoration:none;
+    font-weight:700;
+    }
+
+
+        /* mobile hamburger */
+        .hamburger{display:none;background:none;border:0;color:var(--muted);font-size:22px}
+
+        /* ===== Hero ===== */
+        .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;margin-top:20px}
+        .hero-left{padding:28px;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);border-radius:18px}
+        .eyebrow{display:inline-block;padding:6px 10px;background:var(--glass);border-radius:999px;font-size:13px;color:var(--muted);margin-bottom:12px}
+        .hero h2{font-family:'Playfair Display', serif;font-size:36px;margin:0 0 14px}
+        .hero p{margin:0 0 18px;color:var(--muted)}
+        .hero-actions{display:flex;gap:12px}
+
+        /* right card */
+        .showcase{background:linear-gradient(135deg, rgba(255,255,255,0.02), transparent);border-radius:16px;padding:18px;display:flex;flex-direction:column;gap:12px}
+        .showcase img{width:100%;height:240px;object-fit:cover;border-radius:10px}
+        .feature-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+        .pill{background:var(--glass);padding:8px;border-radius:10px;font-size:13px;text-align:center}
+
+        /* ===== Features ===== */
+        .features{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:22px}
+        .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:14px}
+        .card h3{margin:0 0 8px}
+        .muted{color:var(--muted);font-size:14px}
+
+        /* ===== Portfolio / Gallery ===== */
+        .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:22px}
+        .gallery img{width:100%;height:160px;object-fit:cover;border-radius:10px}
+
+        /* ===== Testimonials ===== */
+        .testimonials{margin-top:22px;display:flex;gap:12px}
+        .quote{flex:1;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:16px;border-radius:12px}
+
+        /* ===== Footer / Contact ===== */
+        footer{margin-top:34px;color:var(--muted);text-align:center}
+        .contact{display:flex;gap:18px;align-items:center;justify-content:center;margin-top:14px}
+        .input{padding:12px;border-radius:12px;border:0;background:rgba(255,255,255,0.03);color:inherit;min-width:220px}
+        .btn-ghost{padding:12px 16px;border-radius:12px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:inherit}
+
+        /* small screens */
+        @media (max-width:980px){
+        .hero{grid-template-columns:1fr;}
+        .features{grid-template-columns:repeat(2,1fr)}
+        .gallery{grid-template-columns:repeat(2,1fr)}
+        nav ul{display:none}
+        .hamburger{display:block}
+        }
+        @media (max-width:520px){
+        .features{grid-template-columns:1fr}
+        .gallery{grid-template-columns:1fr}
+        .hero h2{font-size:28px}
+        }
+
+        /* small animation */
+        .float{animation:float 6s ease-in-out infinite}
+        @keyframes float{0%{transform:translateY(0)}50%{transform:translateY(-8px)}100%{transform:translateY(0)}}
+
+        /* focus & accessibility */
+        a:focus,a.button:focus,input:focus{outline:3px solid rgba(124,58,237,0.18);outline-offset:3px}
+
+        /* === Slider com faixas inclinadas (com -webkit-clip-path para compatibilidade) === */
+    .custom-slider {
+    width: 800px;            /* ajuste conforme quiser */
+    height: 400px;
+    margin: 0px auto;
+    border-radius: 18px;
+    overflow: hidden;
+    position: relative;
+    background: #ddd;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+
+    .slides {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    }
+
+    /* cada faixa é um bloco com background-image */
+    .slide {
+    flex: 1 1 0;
+    min-width: 0;              /* importante para flex + object-fit background */
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.45s ease, filter 0.45s ease, opacity 0.45s ease;
+    filter: blur(3px) brightness(0.7);
+    opacity: 0.7;
+    transform: scale(1);
+    z-index: 1;
+    }
+
+    /* Corrige os cortes um a um */ 
+    .img1 { background-image: url('eu.jpeg'); clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); }
+    .img2 { background-image: url('file204.png'); clip-path: polygon(0 0%, 100% 0, 100% 100%, 0% 100%); }
+    .img3 { background-image: url('mescura.jpg'); clip-path: polygon(0% 0, 100% 0, 100% 100%, 0% 100%); }
+    .img4 { background-image: url('hédoida.jpg'); clip-path: polygon(0% 0, 100% 0, 100% 100%, 0% 100%); }
+
+    /* estado ativo (destaque) */
+    .slide.active {
+    filter: none;
+    opacity: 1;
+    transform: scale(1.03);
+    z-index: 10;
+    }
+
+    /* setas */
+    .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.55);
+    color: #fff;
+    border: none;
+    width: 46px;
+    height: 46px;
+    font-size: 22px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 30;
+    display: grid;
+    place-items: center;
+    }
+    .arrow.left { left: 16px; }
+    .arrow.right { right: 16px; }
+    .arrow:hover { background: rgba(0,0,0,0.75); }
+
+    .bt-login {
+    display:inline-block;
+    padding:10px 14px;
+    border-radius:10px;
+    background:linear-gradient(90deg,var(--accent),var(--accent-2));
+    color:#000000; /* mantém texto branco para destacar no botão */
+    text-decoration:none;
+    font-weight:700;
+    }
+
+
+
+

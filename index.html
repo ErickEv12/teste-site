@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Site dos Toppis — Seu projeto perfeito</title>
+  <link rel="stylesheet" href="style.css">
+
+
+ 
+</head>
+
+ <!-- Fontes -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+
+<body>
+
+  <div class="container">
+    <header>
+      <div class="nav">
+        <div class="brand">
+          <div class="logo">Zz</div>
+          <div>
+            <h1>Site dos Toppis</h1>
+            <div class="muted" style="font-size:12px">Cuidando das pessoas • Protegendo o planeta</div>
+          </div>
+        </div>
+
+        <nav>
+          <button class="hamburger" aria-label="Abrir menu" id="btnMenu">☰</button>
+          <ul id="navList">
+            <li><a href="#home">Início</a></li>
+            <li><a href="#features">Recursos</a></li>
+            <li><a href="#work">Portfólio</a></li>
+            <li><a href="#contact">Contato</a></li>
+          </ul>
+        </nav>
+
+        <div>
+          <button class="cta" style="font-size:13px">Login</button>
+          <a class="cta" href="https://www.gov.br/mds/pt-br/acoes-e-programas/brasil-sem-fome">Doar Agora!</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="hero-left">
+        <span class="eyebrow">Lançamento 2025</span>
+        <h2>Fome Zero e Consumo Responsável — nossa missão começa agora!</h2>
+        <p>As ODS 2 e 12 da ONU se conectam ao promover a erradicação da fome por meio de uma produção e consumo responsáveis, garantindo alimentos suficientes hoje sem comprometer os recursos das futuras gerações..</p>
+
+        <div class="hero-actions">
+          <a class="cta" href="#work">Ver portfólio</a>
+          <a class="btn-ghost" href="#features">Recursos</a>
+        </div>
+
+        <div style="margin-top:18px;display:flex;gap:12px;align-items:center">
+          <div style="display:flex;align-items:center;gap:8px">
+            <div style="width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:grid;place-items:center;font-weight:700">Zz</div>
+            <div>
+              <div style="font-weight:700">Impacto Imediato</div>
+              <div class="muted" style="font-size:13px">Pronto para agir</div>
+            </div>
+          </div>
+
+          <div style="display:flex;align-items:center;gap:8px">
+            <div class="pill">Responsável</div>
+            <div class="pill">Futuro verde</div>
+          </div>
+        </div>
+      </div>
+
+      <aside class="showcase float">
+        <img src="4f1112b1-09c2-4bdf-a0b8-e9c978bd512c.png" alt="Exemplo de projeto"/>
+        <div class="feature-grid">
+          <div class="pill">Agricultura Sustentável 🌱</div>
+          <div class="pill">Consumo Consciente ♻️</div>
+          <div class="pill">Produção Responsável 🏭</div>
+          <div class="pill">Futuro Sem Fome 🍽️</div>
+        </div>
+      </aside>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="features">
+      <div class="card">
+        <h3>Alimentação Sustentável</h3>
+        <p class="muted">Promovemos práticas que cuidam do solo, da água e das pessoas, garantindo alimentos saudáveis hoje e amanhã.</p>
+      </div>
+      <div class="card">
+        <h3>Desperdício Zero</h3>
+        <p class="muted">Reduzir perdas de alimentos é nosso compromisso — cada refeição salva é uma vitória para o planeta.</p>
+      </div>
+      <div class="card">
+        <h3>Futuro Sustentável</h3>
+        <p class="muted">Pequenas mudanças no presente criam um futuro onde ninguém passa fome e os recursos são respeitados.</p>
+      </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section id="work">
+      <h2 style="margin-top:26px">Portfólio</h2>
+      <div class="gallery">
+        <img src="consumption.jpg" alt="Projeto 1">
+        <img src="Poster_landscape_EN.jpg" alt="Projeto 2">
+        <img src="2017_01_15_Editorial_Photo1.webp" alt="Projeto 3">
+        <img src="UN7295115.jpg" alt="Projeto 4">
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+      <div class="quote card">
+        <strong>“Desperdiçar alimento é negar vida a quem tem fome.”</strong>
+        <p class="muted">“Milhares de pessoas sonham com o que muitos jogam fora todos os dias.” — Clelio </p>
+      </div>
+      <div class="quote card">
+        <strong>“O que é sobra para você, poderia ser esperança para mim.”</strong>
+        <p class="muted">“Aquilo que você descarta pode ser o sustento de alguém.” — José </p>
+      </div>
+    </section>
+
+   <!-- Slider com faixas inclinadas -->
+    <h2> Participantes do Projeto </h2>
+<div class="custom-slider">
+    <button class="arrow left" onclick="mudarSlide(-1)">&#10094;</button>
+  
+    <div class="slides">
+      <div class="slide img1 active" aria-label="imagem 1"></div>
+      <div class="slide img2" aria-label="imagem 2"></div>
+      <div class="slide img3" aria-label="imagem 3"></div>
+      <div class="slide img4" aria-label="imagem 4"></div>
+    </div>
+  
+    <button class="arrow right" onclick="mudarSlide(1)">&#10095;</button>
+  </div>
+  
+      
+
+    <!-- Contact -->
+    <section id="contact" style="margin-top:22px;text-align:center">
+      <h2>Pronto para começar?</h2>
+      <p class="muted">Preencha e envie — a equipe entrará em contato.</p>
+
+      <div class="contact">
+        <input class="input" type="text" placeholder="Seu nome" aria-label="Nome">
+        <input class="input" type="email" placeholder="email@exemplo.com" aria-label="Email">
+        <button class="cta">Enviar</button>
+      </div>
+    </section>
+
+    <footer>
+      <p style="margin-top:22px">© <span id="year"></span> Site dos Sonhos • Feito com ❤️ dos Toppis</p>
+    </footer>
+
+  </div>    
+
+  <script>
+    // ano automático
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // menu mobile simples
+    const btn = document.getElementById('btnMenu');
+    const nav = document.getElementById('navList');
+    btn.addEventListener('click', ()=>{
+      if(nav.style.display === 'flex') nav.style.display = 'none';
+      else nav.style.display = 'flex';
+    });
+
+    // pequena interação: captura envio (somente visual)
+    document.querySelector('.cta[role="button"]')?.addEventListener?.('click', (e)=>e.preventDefault());
+
+  // opcional: autoplay (comente se não quiser)
+  // const intervalo = setInterval(()=> mudarSlide(1), 4000);
+  // parar autoplay ao interagir:
+  // slides.forEach(s => s.addEventListener('mouseenter', ()=> clearInterval(intervalo)));
+
+  const slides = Array.from(document.querySelectorAll('.custom-slider .slide'));
+  let idx = 0;
+
+  function ativar(ind) {
+    slides.forEach((s, i) => {
+      s.classList.toggle('active', i === ind);
+    });
+  }
+
+  function mudarSlide(direcao) {
+    idx += direcao;
+    if (idx < 0) idx = slides.length - 1;
+    if (idx >= slides.length) idx = 0;
+    ativar(idx);
+  }
+
+  // opcional: autoplay (comente se não quiser)
+  // const intervalo = setInterval(()=> mudarSlide(1), 4000);
+  // parar autoplay ao interagir:
+  // slides.forEach(s => s.addEventListener('mouseenter', ()=> clearInterval(intervalo)));
+</script>
+
+
+</script>
+
+
+    
+  </script>
+</body>
+</html>
